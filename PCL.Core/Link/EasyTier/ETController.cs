@@ -10,7 +10,6 @@ using PCL.Core.Utils;
 using PCL.Core.Utils.Secret;
 using static PCL.Core.Link.EasyTier.ETInfoProvider;
 using static PCL.Core.Link.Lobby.LobbyInfoProvider;
-using static PCL.Core.Link.Natayark.NatayarkProfileManager;
 
 namespace PCL.Core.Link.EasyTier;
 // ReSharper disable InconsistentNaming
@@ -164,15 +163,9 @@ public static class ETController
             arguments.Add("machine-id", Identify.LauncherId);
 
             // TODO: 等待玩家档案迁移以获取正在使用的档案名称
-            var showName = "default";
-            if (AllowCustomName && !string.IsNullOrWhiteSpace(Config.Link.Username))
-            {
-                showName = Config.Link.Username;
-            }
-            else if (!string.IsNullOrWhiteSpace(NaidProfile.Username))
-            {
-                showName = NaidProfile.Username;
-            }
+            var showName = string.IsNullOrWhiteSpace(Config.Link.Username)
+                ? "default"
+                : Config.Link.Username;
 
             arguments.Add("hostname",
                 (isHost ? "H|" : "J|") + showName + (!string.IsNullOrWhiteSpace(hostname) ? "|" + hostname : ""));

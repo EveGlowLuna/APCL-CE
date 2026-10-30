@@ -1,0 +1,11 @@
+name = "pcl-ce-link"
+main = "worker.js"
+compatibility_date = "2026-10-24"
+
+# 先在 workers.dev 上测试时可以保持默认。
+workers_dev = true
+
+# 绑定自定义域名后取消注释，并把域名改成你自己的：
+# routes = [
+#   { pattern = "link.example.com/*", zone_name = "example.com" }
+# ]

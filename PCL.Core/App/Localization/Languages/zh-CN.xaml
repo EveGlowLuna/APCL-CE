@@ -1840,7 +1840,7 @@
     <sys:String x:Key="Link.Mod.Task.InitLobby">大厅初始化</sys:String>
     <sys:String x:Key="Link.Mod.Task.InitLobbyUi">大厅界面初始化</sys:String>
     <sys:String x:Key="Link.Mod.Task.RefreshUi">刷新界面</sys:String>
-    <sys:String x:Key="Link.Mod.UsernameOrLogin">请先前往设置输入一个用户名，或登录至 Natayark Network 再进行联机！</sys:String>
+    <sys:String x:Key="Link.Mod.UsernameOrLogin">请先前往设置输入一个联机用户名！</sys:String>
 
     <!-- Link.Nat -->
 

@@ -118,25 +118,6 @@
                                            Foreground="{DynamicResource ColorBrushGray1}" Margin="0,0,12,0" />
                             </StackPanel>
                         </local:MyCard>
-
-                        <local:MyCard x:Name="BtnNatayarkUserName">
-                            <StackPanel Orientation="Horizontal"
-                                        Background="{StaticResource ColorBrushSemiTransparent}"
-                                        ToolTip="{DynamicResource Tools.GameLink.Natayark.Account}"
-                                        ToolTipService.Placement="Center"
-                                        ToolTipService.InitialShowDelay="100" ToolTipService.VerticalOffset="-35">
-                                <svgIcon:SvgIcon IsHitTestVisible="False"
-                                             Width="14" Stretch="Uniform"
-                                             IconBrush="{DynamicResource ColorBrushGray1}"
-                                             Margin="12,0,7,0"
-                                             Icon="lucide/user" />
-                                <TextBlock x:Name="LabNatayarkUserName"
-                                           MouseLeftButtonUp="LabNatayarkUserName_MouseLeftButtonUp"
-                                           Text="{DynamicResource Tools.GameLink.Natayark.Login}"
-                                           VerticalAlignment="Center"
-                                           Foreground="{DynamicResource ColorBrushGray1}" Margin="0,0,12,0" />
-                            </StackPanel>
-                        </local:MyCard>
                     </StackPanel>
                     <local:MyCard x:Name="BtnSelectJoin" Margin="10"
                                   Title="{DynamicResource Tools.GameLink.Join.Title}">

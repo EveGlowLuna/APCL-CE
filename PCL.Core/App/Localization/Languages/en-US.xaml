@@ -1840,7 +1840,7 @@
     <sys:String x:Key="Link.Mod.Task.InitLobby">Initialize lobby</sys:String>
     <sys:String x:Key="Link.Mod.Task.InitLobbyUi">Initialize lobby UI</sys:String>
     <sys:String x:Key="Link.Mod.Task.RefreshUi">Refresh UI</sys:String>
-    <sys:String x:Key="Link.Mod.UsernameOrLogin">Please set a username in Settings, or log in to Natayark Network first!</sys:String>
+    <sys:String x:Key="Link.Mod.UsernameOrLogin">Please set a multiplayer username in Settings first!</sys:String>
 
     <!-- Link.Nat -->
 

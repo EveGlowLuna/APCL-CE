@@ -8,10 +8,14 @@
     <Platform Name="ARM64" />
     <Platform Name="x64" />
   </Configurations>
-  <Project Path="PCL.Core\PCL.Core.csproj" Type="C#" />
-  <Project Path="PCL.Core.SourceGenerators\PCL.Core.SourceGenerators.csproj" Type="C#" />
-  <Project Path="PCL.Core.Test\PCL.Core.Test.csproj" Type="C#">
-    <Build Solution="*|*" Project="false" />
-    </Project>
-    <Project Path="Plain Craft Launcher 2\Plain Craft Launcher 2.csproj" Type="C#" />
+  <Project Path="PCL.Core\PCL.Core.csproj" />
+  <Project Path="PCL.Core.SourceGenerators\PCL.Core.SourceGenerators.csproj" />
+  <Project Path="PCL.Core.Test\PCL.Core.Test.csproj">
+    <Build Solution="*|AnyCPU" Project="false" />
+    <Build Solution="*|ARM64" Project="false" />
+    <Build Solution="Beta|x64" Project="false" />
+    <Build Solution="CI|x64" Project="false" />
+    <Build Solution="Release|x64" Project="false" />
+  </Project>
+    <Project Path="Plain Craft Launcher 2\Plain Craft Launcher 2.csproj" />
 </Solution>

@@ -206,7 +206,8 @@ public class EasyTierEntity
 
         foreach (var address in ETRelay.RelayList
             .Select(static x => x.Url)
-            .Concat(_fallbackNodeLinks))
+            .Concat(_fallbackNodeLinks)
+            .Distinct())
         {
             args.Add("p", address);
         }
@@ -271,6 +272,11 @@ public class EasyTierEntity
 
     private readonly string[] _fallbackNodeLinks =
     [
+        // Terracotta 公共中继（内容会重定向到当前可用的 EasyTier 节点）。
+        // HMCL/陶瓦房客会优先连这个节点，PCL CE 房主也连上它才能更快碰面。
+        "https://terracotta.glavo.site/acebc7d8-1208-47fd-b212-d03ac49e36e0",
+        // 实测较稳定的直连节点；如果地址失效，可在公告服务器的 relays 中替换。
+        "tcp://183.66.27.22:39409",
         "tcp://public.easytier.top:11010",
         "tcp://public2.easytier.cn:54321",
         "https://etnode.zkitefly.eu.org/node1",
